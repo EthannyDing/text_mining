@@ -1,0 +1,32 @@
+model_dir: law-finance-gov_fra_eng_big_transformer_model/avg/
+
+data:
+    train_features_file: onmt_data/yappn_law_finance_gov_eng_fra_20201022_valid.fra.tok.sp
+    train_labels_file: onmt_data/yappn_law_finance_gov_eng_fra_20201022_valid.fra.tok.sp
+    eval_features_file: onmt_data/yappn_law_finance_gov_eng_fra_20201022_valid.fra.tok.sp
+    eval_labels_file: onmt_data/yappn_law_finance_gov_eng_fra_20201022_valid.eng.tok.sp
+    source_vocabulary: onmt_data/law-finance-gov_vocab.fra
+    target_vocabulary: onmt_data/law-finance-gov_vocab.eng
+train:
+    maximum_features_length: 150
+    maximum_labels_length: 150
+    batch_size: 32
+    effective_batch_size: 25000
+
+
+params:
+    replace_unknown_target: True
+    guided_alignment_type: ce
+    maximum_decoding_length: 500
+
+eval:
+    external_evaluators: bleu
+    early_stopping:
+        metric: bleu
+        min_improvement: 0.1
+        steps: 15
+    export_on_best: bleu
+    batch_size: 10
+
+score:
+    batch_size: 10

@@ -1,0 +1,5 @@
+## eng_fra translation
+onmt-main  --config onmt_data/law-finance-gov_eng_fra.yml --checkpoint_path=law-finance-gov_eng_fra_big_transformer_model infer --features_file ./source_text.eng > ./predictions_test.fra
+
+## fra_eng translation
+onmt-main  --config onmt_data/law-finance-gov_fra_eng.yml --checkpoint_path=law-finance-gov_fra_eng_big_transformer_model/avg infer --features_file ./source_text.fra > ./ predictions_test.eng

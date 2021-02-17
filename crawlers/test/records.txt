@@ -1,0 +1,19 @@
+website=https://starlightcapital.com/en/
+xpath=//div[@id="efektiv-hsc__col"]/ul[1]/li[2]/a
+
+website=www.educaloi.qc.ca
+xpath=//a[@title='Fr']
+
+website=https://www.pwc.com/ca/en.html
+xpath=//a[contains(text(), "Français")]
+
+website=https://www.pimco.ca/en-ca/
+xpath=//span[@class="languageSwitcherSet borderRight "]/span/a[2]
+steps = click&&//span[@lang="en-CA"]|||click&&//label[@for="Financial Intermediary"]
+
+website = https://www.criq.qc.ca/en/
+xpath = //div[@class="lang_switcher"]/div/div/ul/li[3]/a
+
+website=https://www.clo-ocol.gc.ca/en/
+xpath=//a[@hreflang="fr"]
+steps = click&&//a[contains(text(), "English")]
