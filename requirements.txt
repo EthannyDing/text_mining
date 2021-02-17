@@ -1,0 +1,6 @@
+lxml==4.5.2
+bs4==4.6.3
+gensim==3.8.3
+spacy_langdetect
+rank_bm25
+nmslib
